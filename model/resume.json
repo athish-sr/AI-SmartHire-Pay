@@ -1,0 +1,139 @@
+{
+  "structured_data": {
+    "candidate_overview": {
+      "name": "Athish S R",
+      "email": "athishsamy123@gmail.com",
+      "phone": "+91 7550230469",
+      "education": [
+        {
+          "institution": "PSG College Of Technology",
+          "degree": "Bachelor of Technology in Information Technology",
+          "details": "",
+          "date_range": "2023 \u2013 2027"
+        },
+        {
+          "institution": "SKV Matric Higher Secondary School",
+          "degree": "Class XII",
+          "details": "Marks: 580 out of 600",
+          "date_range": "2021 \u2013 2023"
+        }
+      ]
+    },
+    "skills": {
+      "frontend": [
+        "HTML",
+        "CSS"
+      ],
+      "backend": [
+        "Python"
+      ],
+      "frameworks": [
+        "Django",
+        "Flask"
+      ],
+      "databases": [
+        "MySQL",
+        "Oracle"
+      ],
+      "tools": [],
+      "programming_languages": [
+        "Python",
+        "Java",
+        "C"
+      ]
+    },
+    "Projects": [
+      "HealthCare System",
+      "Automated Machine & Deep Learning",
+      "Airport Management System",
+      "Vehicle Management System"
+    ],
+    "predicted_roles": [
+      "Data Scientist",
+      "Full Stack Developer",
+      "Backend Developer"
+    ]
+  },
+  "weakness_analysis": {
+    "Data Scientist": {
+      "technical_gaps": [
+        "No data science libraries or tools mentioned (e.g., Pandas, NumPy, Matplotlib, Scikit-learn)",
+        "No machine learning frameworks mentioned (e.g., TensorFlow, Keras)",
+        "No experience with SQL databases for data analysis",
+        "No experience with NoSQL databases"
+      ],
+      "experience_gaps": [
+        "No relevant work experience in data science or related field",
+        "No projects or contributions to showcase data science skills"
+      ]
+    },
+    "Full Stack Developer": {
+      "technical_gaps": [
+        "Lack of frontend frameworks (e.g., React, Angular) in the skillset",
+        "No backend frameworks other than Django and Flask",
+        "Missing database skills: MongoDB, PostgreSQL, SQL Server"
+      ],
+      "experience_gaps": [
+        "No relevant work experience or projects to demonstrate expertise",
+        "Education is recent; need more time for practical application of skills"
+      ]
+    },
+    "Backend Developer": {
+      "technical_gaps": [
+        "Backend frameworks other than Django and Flask",
+        "Cloud platforms (e.g., AWS, Azure)",
+        "Containerization tools (e.g., Docker)",
+        "API design principles and RESTful APIs"
+      ],
+      "experience_gaps": [
+        "Lack of relevant work experience in Backend Development",
+        "No mention of personal projects or contributions to open-source projects",
+        "Limited depth in experience, as no specific roles or responsibilities are mentioned"
+      ]
+    }
+  },
+  "hr_strategies": {
+    "salary_leverage": [
+      {
+        "reason": "Data Scientist lacks experience with SQL databases for data analysis",
+        "impact": "10% salary adjustment potential"
+      },
+      {
+        "reason": "Full Stack Developer has limited depth in experience, as no specific roles or responsibilities are mentioned",
+        "impact": "8% salary adjustment potential"
+      },
+      {
+        "reason": "Backend Developer lacks relevant work experience in Backend Development",
+        "impact": "12% salary adjustment potential"
+      }
+    ],
+    "benefit_adjustments": [
+      {
+        "type": "Training Budget",
+        "recommendation": "Offer 2000 INR annual upskilling fund for Data Science libraries and tools (e.g., Pandas, NumPy, Matplotlib, Scikit-learn)"
+      },
+      {
+        "type": "Mentorship Program",
+        "recommendation": "Assign experienced Backend Developer as mentor to improve cloud platforms (e.g., AWS, Azure) skills"
+      },
+      {
+        "type": "Project Opportunities",
+        "recommendation": "Provide opportunities for Full Stack Developers to work on projects that utilize frontend frameworks (e.g., React, Angular)"
+      }
+    ],
+    "development_plans": [
+      {
+        "role": "Data Scientist",
+        "plan": "Complete online courses in SQL databases and NoSQL databases within the next 6 months"
+      },
+      {
+        "role": "Full Stack Developer",
+        "plan": "Work on personal projects that integrate frontend frameworks (e.g., React, Angular) within the next 9 months"
+      },
+      {
+        "role": "Backend Developer",
+        "plan": "Participate in online communities and forums to learn about API design principles and RESTful APIs within the next 3 months"
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Summary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reusing upload portal styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .content {
+            margin-top: 10px;
+            margin-left: 100px;
+            padding: 30px;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+            overflow-y: auto;
+            flex-grow: 1;
+            height: calc(100vh - 60px);
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2, h3 {
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 8px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #2a4d69;
+        }
+
+        .skill-category {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding: 15px;
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="card">
+            <h2>Candidate Overview</h2>
+            <p><strong>Name:</strong> {{ data.candidate_overview.name }}</p>
+            <p><strong>Email:</strong> {{ data.candidate_overview.email }}</p>
+            <p><strong>Phone:</strong> {{ data.candidate_overview.phone }}</p>
+
+            {% if data.candidate_overview.education %}
+                <h3>Education</h3>
+                <ul>
+                    {% for edu in data.candidate_overview.education %}
+                        <li><strong>{{ edu.degree }}</strong>, {{ edu.institution }} ({{ edu.date_range }})</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% if data.skills %}
+                <h3>Skills</h3>
+                <ul>
+                    {% for category, skills in data.skills.items %}
+                        <li class="skill-category">
+                            <strong>{{ category|capfirst }}:</strong> {{ skills|join:", " }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+<form method="post" action="{% url 'chatbot' %}" style="text-align: center; margin-top: 20px;">
+    {% csrf_token %}
+    <button type="submit" style="
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;">
+        Confirm Details are Correct
+    </button>
+</form>
+
+    </div>
+    <!-- Add this script at the bottom of your resume_details.html -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const confirmBtn = document.querySelector('button[type="submit"]');
+    const processingId = "{{ processing_id }}";
+    
+    // Disable button initially
+    confirmBtn.disabled = true;
+    confirmBtn.style.backgroundColor = '#cccccc';
+    confirmBtn.textContent = 'Processing Resume...';
+    
+    // Function to check processing status
+    function checkProcessingStatus() {
+        fetch(`/check_processing/?id=${processingId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.complete) {
+                    confirmBtn.disabled = false;
+                    confirmBtn.style.backgroundColor = '#4CAF50';
+                    confirmBtn.textContent = 'Confirm Details are Correct';
+                } else {
+                    // Check again after 2 seconds
+                    setTimeout(checkProcessingStatus, 2000);
+                }
+            });
+    }
+    
+    // Start checking status
+    checkProcessingStatus();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+    }
+    .chatbot-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .chat-header {
+      background-color: #ff9800;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+    }
+    .chat-messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #fff;
+    }
+    .message {
+      max-width: 70%;
+      padding: 14px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .user-message {
+      align-self: flex-end;
+      background: #ff9800;
+      color: white;
+    }
+    .bot-message {
+      align-self: flex-start;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+    }
+    .chat-input {
+      display: flex;
+      padding: 15px;
+      background: #fafafa;
+      border-top: 1px solid #ddd;
+    }
+    #user-input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      outline: none;
+    }
+    #send-btn {
+      margin-left: 10px;
+      padding: 12px 25px;
+      border-radius: 25px;
+      background: #ff9800;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    #send-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  .typing-indicator {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      background: #f0f0f0;
+      border-radius: 25px;
+      align-self: flex-start;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+    }
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #888;
+      border-radius: 50%;
+      margin: 0 2px;
+      animation: typingAnimation 1.4s infinite ease-in-out;
+    }
+    .typing-dot:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    @keyframes typingAnimation {
+      0%, 60%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body>
+
+<input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+<div class="chatbot-container">
+  <div class="chat-header">HR Negotiation</div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Type your message..." />
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+
+<script>
+  const chatMessages = document.getElementById('chat-messages');
+  const userInput = document.getElementById('user-input');
+  const sendBtn = document.getElementById('send-btn');
+  let isWaitingForResponse = false;
+  let negotiationFinished = false; // New flag to track negotiation state
+
+  // Function to show typing indicator
+  function showTypingIndicator() {
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'typing-indicator';
+    typingDiv.id = 'typing-indicator';
+    typingDiv.innerHTML = `
+      <div class="typing-dot"></div>
+      <div class="typing-dot"></div>
+      <div class="typing-dot"></div>
+    `;
+    chatMessages.appendChild(typingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Function to hide typing indicator
+  function hideTypingIndicator() {
+    const typingIndicator = document.getElementById('typing-indicator');
+    if (typingIndicator) {
+      typingIndicator.remove();
+    }
+  }
+
+  // Function to add a message to the chat
+  function addUserMessage(message) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'message user-message';
+    msgDiv.textContent = message;
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Function to add a bot message with streaming
+  function addBotMessageStreamed(text) {
+    hideTypingIndicator();
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'message bot-message';
+    msgDiv.textContent = '';
+    chatMessages.appendChild(msgDiv);
+    
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i < text.length) {
+        msgDiv.textContent += text.charAt(i);
+        i++;
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      } else {
+        clearInterval(interval);
+        isWaitingForResponse = false;
+        
+        // Check if negotiation has finished (look for specific keywords in response)
+        if (text.includes("=== Negotiation Result ===") || 
+            text.includes("Final Offer:") || 
+            text.includes("Next Steps:") || 
+            text.includes("Thank you for your time")) {
+          negotiationFinished = true;
+          sendBtn.disabled = true;
+          userInput.disabled = true;
+          userInput.placeholder = "Negotiation completed";
+        } else {
+          sendBtn.disabled = false;
+        }
+        
+        userInput.focus();
+      }
+    }, 30);
+  }
+
+  // Function to send message and get a response
+  function sendMessage() {
+    const message = userInput.value.trim();
+    if (!message || isWaitingForResponse || negotiationFinished) return;
+
+    addUserMessage(message);
+    showTypingIndicator();
+    isWaitingForResponse = true;
+    sendBtn.disabled = true;
+    userInput.value = '';
+
+    fetch('/chatbot-reply/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+      },
+      body: JSON.stringify({ message })
+    })
+    .then(response => response.json())
+    .then(data => {
+      addBotMessageStreamed(data.reply);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      hideTypingIndicator();
+      isWaitingForResponse = false;
+      if (!negotiationFinished) {
+        sendBtn.disabled = false;
+      }
+    });
+  }
+
+  // Send initial LLaMA response when the page loads
+  window.addEventListener('DOMContentLoaded', () => {
+    showTypingIndicator();
+    isWaitingForResponse = true;
+    sendBtn.disabled = true;
+    
+    fetch('/chatbot-reply/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+      },
+      body: JSON.stringify({ message: "" })
+    })
+    .then(res => res.json())
+    .then(data => {
+      addBotMessageStreamed(data.reply);
+    })
+    .catch(err => {
+      console.error("Error loading initial message:", err);
+      isWaitingForResponse = false;
+      if (!negotiationFinished) {
+        sendBtn.disabled = false;
+      }
+    });
+  });
+
+  // Event listeners
+  sendBtn.addEventListener('click', sendMessage);
+  userInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !isWaitingForResponse && !negotiationFinished) {
+      sendMessage();
+    }
+  });
+</script>
+</body>
+</html>

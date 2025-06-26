@@ -1,0 +1,140 @@
+{
+  "structured_data": {
+    "candidate_overview": {
+      "name": "Athish S R",
+      "email": "athishsamy123@gmail.com",
+      "phone": "+91 7550230469",
+      "education": [
+        {
+          "institution": "PSG College Of Technology Coimbatore, India",
+          "degree": "Bachelor of Technology in Information Technology",
+          "details": "2023 \u2013 2027",
+          "date_range": "CGPA: 9.46*"
+        },
+        {
+          "institution": "SKV Matric Higher Secondary School Namakkal, India",
+          "degree": "Class XII",
+          "details": "2021 \u2013 2023",
+          "date_range": "Marks: 580 out of 600"
+        }
+      ]
+    },
+    "skills": {
+      "frontend": [
+        "HTML",
+        "CSS"
+      ],
+      "backend": [
+        "Python"
+      ],
+      "frameworks": [
+        "Django",
+        "Flask"
+      ],
+      "databases": [
+        "MySQL",
+        "Oracle"
+      ],
+      "tools": [],
+      "programming_languages": [
+        "Python",
+        "Java",
+        "C"
+      ]
+    },
+    "Projects": [
+      "HealthCare System",
+      "Automated Machine & Deep Learning",
+      "Airport Management System",
+      "Vehicle Management System"
+    ],
+    "predicted_roles": [
+      "Data Scientist",
+      "Full Stack Developer",
+      "Machine Learning Engineer"
+    ]
+  },
+  "weakness_analysis": {
+    "Data Scientist": {
+      "technical_gaps": [
+        "No data science libraries or frameworks (e.g. Pandas, NumPy, Scikit-learn, TensorFlow) in the 'frameworks' or 'programming_languages' section",
+        "Missing machine learning and deep learning skills (e.g. Keras, PyTorch)",
+        "No experience with popular data visualization tools (e.g. Matplotlib, Seaborn, Plotly)",
+        "No mention of big data processing skills (e.g. Hadoop, Spark)",
+        "No experience with cloud platforms (e.g. AWS, GCP, Azure)"
+      ],
+      "experience_gaps": [
+        "No relevant work experience in the Data Scientist role",
+        "Lack of depth in experience - no specific projects or accomplishments mentioned"
+      ]
+    },
+    "Full Stack Developer": {
+      "technical_gaps": [
+        "No JavaScript, React or Angular skills",
+        "Limited database management system knowledge (only MySQL and Oracle)",
+        "Missing frontend frameworks like Bootstrap, Material-UI etc.",
+        "No experience with state-of-the-art backend frameworks like Node.js, Express.js"
+      ],
+      "experience_gaps": [
+        "Zero years of professional experience in the field",
+        "Lack of relevant projects to demonstrate skills and expertise"
+      ]
+    },
+    "Machine Learning Engineer": {
+      "technical_gaps": [
+        "No machine learning frameworks mentioned",
+        "No deep learning libraries (e.g., TensorFlow, PyTorch) mentioned",
+        "No data science tools (e.g., Jupyter Notebook, pandas) mentioned"
+      ],
+      "experience_gaps": [
+        "No relevant work experience in Machine Learning Engineer role",
+        "Lack of depth in backend development with Python",
+        "No evidence of collaboration or team experience"
+      ]
+    }
+  },
+  "hr_strategies": {
+    "salary_leverage": [
+      {
+        "reason": "Data Scientist lacks experience with popular data visualization tools (e.g. Matplotlib, Seaborn, Plotly)",
+        "impact": "10% salary adjustment potential"
+      },
+      {
+        "reason": "Full Stack Developer has limited database management system knowledge",
+        "impact": "8% salary adjustment potential"
+      },
+      {
+        "reason": "Machine Learning Engineer lacks experience with deep learning libraries (e.g., TensorFlow, PyTorch)",
+        "impact": "12% salary adjustment potential"
+      }
+    ],
+    "benefit_adjustments": [
+      {
+        "type": "Training Budget",
+        "recommendation": "Offer 2000 INR annual upskilling fund for Data Scientist to learn data visualization tools"
+      },
+      {
+        "type": "Mentorship Program",
+        "recommendation": "Assign experienced mentor for Machine Learning Engineer to improve backend development skills with Python"
+      },
+      {
+        "type": "Online Course Subscription",
+        "recommendation": "Provide subscription to Coursera, Udemy or edX for Full Stack Developer to learn JavaScript, React or Angular"
+      }
+    ],
+    "development_plans": [
+      {
+        "role": "Data Scientist",
+        "plan": "Within the next 6 months: Learn data visualization tools (Matplotlib, Seaborn, Plotly), Get experience with big data processing skills (Hadoop, Spark)"
+      },
+      {
+        "role": "Full Stack Developer",
+        "plan": "Within the next 9 months: Gain expertise in JavaScript, React or Angular, Improve database management system knowledge"
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "plan": "Within the next 12 months: Develop skills with machine learning frameworks (TensorFlow, PyTorch), Enhance backend development with Python and data science tools (Jupyter Notebook, pandas)"
+      }
+    ]
+  }
+}

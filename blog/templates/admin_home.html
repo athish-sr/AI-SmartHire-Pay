@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Portal - ABC Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            background: url('{% static 'images/background.jpg' %}') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logout a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .logout a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar {
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .sidebar-title {
+            font-size: 28px;
+            color:white;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            justify-items: center;
+        }
+    
+        .sidebar-menu li {
+            list-style: none;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .sidebar-menu a {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 135px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 18px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-menu a i {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-menu a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 900px) {
+            .sidebar-menu {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    
+        @media (max-width: 600px) {
+            .sidebar-menu {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">ABC Company</div>
+        <div class="logout">
+            <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2 class="sidebar-title">Admin Portal</h2>
+        <br>
+        <ul class="sidebar-menu">
+            <li><a href="{% url 'add_employee' %}"><i class="fas fa-user-plus"></i> Add Employee</a></li>
+            <li><a href="{% url 'view_employees' %}"><i class="fas fa-users"></i> View Employees</a></li>
+            <li><a href="{% url 'upload_attendance' %}"><i class="fas fa-calendar-check"></i> Upload Attendance</a></li>
+            <li><a href="{% url 'leave_requests' %}"><i class="fas fa-user-clock"></i> Approve Leave</a></li>
+            <li><a href="{% url 'predict_salary' %}"><i class="fas fa-chart-line"></i> Salary Prediction</a></li>
+            <li><a href="{% url 'salary_operations' %}"><i class="fas fa-money-check-alt"></i> Salary Operations</a></li>
+            <li><a href="{% url 'report_view' %}"><i class="fas fa-paper-plane"></i> Report</a></li>
+        </ul>
+    </div>
+    {% if messages %}
+        {% for message in messages %}
+          <div class="popup {% if message.tags %}{{ message.tags }}{% endif %}">
+            {% if message.tags == "error" %}
+              <i class="bx bx-error-circle"></i>
+            {% elif message.tags == "success" %}
+              <i class="bx bx-check-circle"></i>
+            {% endif %}
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+</body>
+</html>

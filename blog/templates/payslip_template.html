@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payslip</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            background: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+        .payslip-container {
+            max-width:900px;
+            margin-left: 400px;
+            margin-top: 100px;
+            padding: 40px;
+            background: #fff; padding: 30px; border-radius: 10px;
+            max-width: 800px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 { text-align: center; color: #333; }
+        .row { display: flex; justify-content: space-between; margin-top: 10px; }
+        table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        th, td { border: 1px solid #dee2e6; padding: 10px; text-align: left; }
+        th { background-color: #e9ecef; }
+        .download-btn { margin-top: 30px; text-align: center; }
+        .download-btn a {
+            background-color: #007bff; color: #fff; padding: 12px 20px;
+            text-decoration: none; border-radius: 5px; cursor: pointer;
+        }
+        .download-btn a:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    {% include 'header1.html' %}
+    <!-- CSRF Token hidden input -->
+    <input type="hidden" id="csrf-token" value="{{ csrf_token }}">
+
+    <div class="payslip-container" id="payslip">
+        <h2>Monthly Payslip - {{ month }} {{ salary.salary_year }}</h2>
+
+        <table class="info-table">
+            <tr>
+                <td><strong>Employee Name:</strong> {{ employee.first_name }} {{ employee.last_name }}</td>
+                <td><strong>Employee ID:</strong> {{ employee.employee_id }}</td>
+            </tr>
+            <tr>
+                <td><strong>Department:</strong> {{ employee.department.department_name }}</td>
+                <td><strong>Designation:</strong> {{ employee.designation.designation_title }}</td>
+            </tr>
+        </table>
+
+        <table class="salary-table">
+            <thead>
+                <tr>
+                    <th>Earnings</th>
+                    <th>Amount (INR)</th>
+                    <th>Deductions</th>
+                    <th>Amount (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Pay</td>
+                    <td>{{ salary.basic_salary }}</td>
+                    <td>PF</td>
+                    <td>{{ pf }}</td>
+                </tr>
+                <tr>
+                    <td>HRA</td>
+                    <td>{{ salary.allowances }}</td>
+                    <td>Professional Tax</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    {% if salary.bonus %}
+                    <td>Bonus</td>
+                    <td>{{ salary.bonus }}</td>
+                    {% else %}
+                    <td></td>
+                    <td></td>
+                    {% endif %}
+                    <td>Income Tax</td>
+                    <td>{{ income_tax }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Deductions</td>
+                    <td>{{ deductions }}</td>
+                <tr>
+                <tr>
+                    <th>Total Earnings</th>
+                    <th>{{ total_earnings }}</th>
+                    <th>Total Deductions</th>
+                    <th>{{ total_deductions }}</th>
+                </tr>
+                <tr>
+                    <th colspan="3">Net Pay</th>
+                    <th>{{ salary.net_salary }}</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="download-btn" id="download-section">
+            <a onclick="downloadPDF()">Download as PDF</a>
+        </div>
+    </div>
+    {% if messages %}
+        {% for message in messages %}
+          <div class="popup {% if message.tags %}{{ message.tags }}{% endif %}">
+            {% if message.tags == "error" %}
+              <i class="bx bx-error-circle"></i>
+            {% elif message.tags == "success" %}
+              <i class="bx bx-check-circle"></i>
+            {% endif %}
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Script to get CSRF token and send PDF -->
+    <script>
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const payslip = document.getElementById('payslip');
+            const downloadBtn = document.getElementById('download-section');
+            downloadBtn.style.display = 'none';
+        
+            await new Promise(resolve => setTimeout(resolve, 100));  // Ensure style updates
+        
+            const canvas = await html2canvas(payslip, { scale: 2 });
+            const imgData = canvas.toDataURL('image/png');
+        
+            const pdf = new jsPDF('p', 'pt', 'a4');
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+        
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            pdf.save('payslip.pdf');
+            const pdfBinary = pdf.output('arraybuffer');
+            const formData = new FormData();
+            formData.append('pdf', new Blob([pdfBinary], { type: 'application/pdf' }), 'payslip.pdf');
+        
+            // Get dynamic data (employee_id, month, year) from the template
+            const employeeId = '{{ employee.employee_id }}';  // Django template variable
+            const month = '{{ salary.salary_month }}';  // Django template variable
+            const year = '{{ salary.salary_year }}';  // Django template variable
+        
+            const csrfToken = document.getElementById('csrf-token').value;
+        
+            // Construct the URL with employee_id, month, and year
+            const url = `/generate-payslip/${employeeId}/${month}/${year}/`;
+        
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken
+                },
+                body: formData
+            });
+        
+            const result = await response.json();
+            {% if messages %}
+                {% for message in messages %}
+                <div class="popup {% if message.tags %}{{ message.tags }}{% endif %}">
+                    {% if message.tags == "error" %}
+                    <i class="bx bx-error-circle"></i>
+                    {% elif message.tags == "success" %}
+                    <i class="bx bx-check-circle"></i>
+                    {% endif %}
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+            downloadBtn.style.display = 'block';
+        }
+            </script>
+</body>
+</html>

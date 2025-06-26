@@ -1,0 +1,203 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tax Input Form</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            background: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-left: 270px;
+            margin-top: 50px;
+            padding: 40px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 25px;
+            background-color: #38ef7d;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    {%include 'header1.html'%}
+    <div class="container">
+        <h2>Tax Input Form</h2>
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_rent_paid">Rent Paid</label>
+                    {{ form.rent_paid }}
+                    {% if form.rent_paid.errors %}
+                        <div class="error-message">{{ form.rent_paid.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_lic">LIC</label>
+                    {{ form.lic }}
+                    {% if form.lic.errors %}
+                        <div class="error-message">{{ form.lic.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_epf">Employee Provident Fund(EPF)</label>
+                    {{ form.epf }}
+                    {% if form.epf.errors %}
+                        <div class="error-message">{{ form.epf.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_home_principal">Home Loan Principal Amount</label>
+                    {{ form.home_principal }}
+                    {% if form.home_principal.errors %}
+                        <div class="error-message">{{ form.home_principal.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_mutual_fund">Mutual Fund Investment</label>
+                    {{ form.mutual_fund }}
+                    {% if form.mutual_fund.errors %}
+                        <div class="error-message">{{ form.mutual_fund.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_nps_contribution">NPS Contribution</label>
+                    {{ form.nps_contribution }}
+                    {% if form.nps_contribution.errors %}
+                        <div class="error-message">{{ form.nps_contribution.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_health_insurance">Health Insurance</label>
+                    {{ form.health_insurance }}
+                    {% if form.health_insurance.errors %}
+                        <div class="error-message">{{ form.health_insurance.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_parent_health">Parent Health Insurance</label>
+                    {{ form.parent_health }}
+                    {% if form.parent_health.errors %}
+                        <div class="error-message">{{ form.parent_health.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_home_loan_interest">Home Loan Interest Amount</label>
+                    {{ form.home_loan_interest }}
+                    {% if form.home_loan_interest.errors %}
+                        <div class="error-message">{{ form.home_loan_interest.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="id_education_expense">Education Expense</label>
+                    {{ form.education_expense }}
+                    {% if form.education_expense.errors %}
+                        <div class="error-message">{{ form.education_expense.errors|striptags }}</div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="id_donations">Donations</label>
+                {{ form.donations }}
+                {% if form.donations.errors %}
+                    <div class="error-message">{{ form.donations.errors|striptags }}</div>
+                {% endif %}
+            </div>
+
+            <button type="submit">Submit</button>
+            {% if form.errors %}
+    <div class="error-message">
+        {{ form.non_field_errors }}
+        {% for field in form %}
+            {{ field.errors }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+        </form>
+    </div>
+</body>
+</html>

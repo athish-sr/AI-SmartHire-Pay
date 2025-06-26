@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+    <style>
+        body {
+            background: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-left: 270px;
+            margin-top: 50px;
+            padding: 40px;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 25px;
+            background-color: #38ef7d;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    {%include 'header.html'%}
+    <div class='container'>
+        <h2>Edit Employee - {{ employee.first_name }} {{ employee.last_name }}</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" id="1">Save</button>
+        <a href="{% url 'view_employees' %}" style="text-decoration: none; padding-left:50px;">
+            <button type="button" id="2">Cancel</button>
+        </a>
+        
+    </form>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#id_department').on('change', function () {
+        var deptId = $(this).val();
+        var designationDropdown = $('#id_designation');
+
+        designationDropdown.html('<option value="">Loading...</option>');
+
+        if (deptId) {
+            $.ajax({
+                url: "{% url 'get_designations' %}",
+                data: {
+                    department_id: deptId
+                },
+                success: function (data) {
+                    designationDropdown.empty();
+                    designationDropdown.append('<option value="">Select Designation</option>');
+                    data.forEach(function (item) {
+                        designationDropdown.append(`<option value="${item.designation_id}">${item.designation_title}</option>`);
+                    });
+                }
+            });
+        } else {
+            designationDropdown.html('<option value="">Select Designation</option>');
+        }
+    });
+</script>   
+</html>

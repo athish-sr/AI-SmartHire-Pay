@@ -1,0 +1,355 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary & Payslip Management - Employee Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+        /* Content area styling */
+        .content {
+            margin-top: 70px;
+            margin-left: 250px;
+            padding: 30px;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+            overflow-y: auto;
+            flex-grow: 1;
+            height: calc(100vh - 60px);
+        }
+
+        .content h2 {
+            text-align: center;
+            color: rgb(0,0,0);
+            margin-bottom: 30px;
+        }
+
+        /* Card styling */
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card h3 {
+            color: #333;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Payslip table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            table-layout: fixed;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Download buttons */
+        .download-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+
+        .download-btn i {
+            margin-right: 5px;
+        }
+
+        .pdf-btn {
+            background-color: #e74c3c;
+        }
+
+        .pdf-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .excel-btn {
+            background-color: #2ecc71;
+        }
+
+        .excel-btn:hover {
+            background-color: #27ae60;
+        }
+
+        /* Summary sections */
+        .summary-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .summary-box {
+            flex: 1;
+            min-width: 200px;
+            background: #f8f9fa;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 4px;
+        }
+
+        .summary-box h4 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        /* Year selector */
+        .year-selector {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .year-selector select {
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: white;
+            font-size: 16px;
+        }
+
+        /* Table scroll */
+        .table-wrapper {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 20px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sticky table header */
+        .table-wrapper table thead th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Custom scrollbar */
+        .table-wrapper::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding: 15px;
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .summary-section {
+                flex-direction: column;
+            }
+
+            .summary-box {
+                min-width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <!-- Content Area -->
+    <div class="content">
+            <!-- Fund Transactions Card -->
+            <div class="card">
+                <h3>Recent Fund Transactions</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Transaction Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for transaction in transactions %}
+                            <tr>
+                                <td>{{ transaction.date }}</td>
+                                <td>
+                                    {% if transaction.credit > 0 %}
+                                        Credit
+                                    {% elif transaction.debit > 0 %}
+                                        Debit
+                                    {% else %}
+                                        Neutral
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    
+                                    {% if transaction.credit > 0 %}
+                                    <span style="color: green;">
+                                        {{ transaction.credit }}
+                                    </span>
+                                    
+                                    {% elif transaction.debit > 0 %}
+                                    <span style="color: red;">
+                                        -{{ transaction.debit }}
+                                    </span>
+                                    {% endif %}
+                                
+                                </td>
+                                <td>
+                                    {{transaction.available_funds}}        
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="4">No transactions found.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+    
+<!-- Annual Reports Table -->
+
+    <div class="card">
+        <h3>Historical Financial Reports</h3>
+        <div class="table-wrapper">
+    <table  >
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Total Credits</th>
+                <th>Total Debits</th>
+                <th>Net Balance</th>
+                <th>Report</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for year_data in annual_data %}
+            <tr>
+                <td>{{ year_data.year }}</td>
+                <td>${{ year_data.total_credits|floatformat:2 }}</td>
+                <td>${{ year_data.total_debits|floatformat:2 }}</td>
+                <td>${{ year_data.net_balance|floatformat:2 }}</td>
+                <td>
+                    <a href="{% url 'financial-report' year=year_data.year %}" class="download-btn pdf-btn" download>
+                        <i class="fas fa-file-pdf"></i> PDF
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<style>
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.report-table th, .report-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.report-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.download-btn.pdf-btn {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    background-color: #e74c3c;
+}
+
+.download-btn.pdf-btn:hover {
+    background-color: #c0392b;
+}
+</style>
+            </div>
+        </div>
+    </body>
+    </html>

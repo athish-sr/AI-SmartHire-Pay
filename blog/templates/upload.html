@@ -1,0 +1,246 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Upload Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .content {
+            margin-top:50px;
+            margin-left: 100px;
+            padding: 30px;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+            overflow-y: auto;
+            flex-grow: 1;
+            height: calc(100vh - 60px);
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card h3 {
+            color: #333;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .upload-section {
+            margin-top: 20px;
+        }
+
+        .custom-file-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #2196f3;
+            color: white;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #1976d2;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-file-upload:active {
+            transform: translateY(1px);
+        }
+
+        .custom-file-upload input[type="file"] {
+            display: none;
+        }
+
+        #file-name {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .upload-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .upload-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .upload-btn:active {
+            transform: translateY(1px);
+        }
+
+        .summary-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .summary-box {
+            flex: 1;
+            min-width: 200px;
+            background: #f8f9fa;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 4px;
+        }
+
+        .summary-box h4 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .popup {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding: 15px;
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .summary-section {
+                flex-direction: column;
+            }
+
+            .summary-box {
+                min-width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Resume Upload Portal</h2>
+        
+        <div class="card">
+            <h3>Upload Your Resume</h3>
+            
+            <div class="upload-section">
+                <form method="POST" enctype="multipart/form-data" action="{% url 'upload_resume' %}">
+                    {% csrf_token %}
+                    <label class="custom-file-upload">
+                        <i class="fas fa-cloud-upload-alt"></i> Choose File
+                        <input type="file" id="file-input" name="resume" accept=".pdf,.doc,.docx" required>
+                    </label>
+                    <div id="file-name">
+                        {% if uploaded_file %}
+                            Current file: {{ uploaded_file.name }}
+                        {% else %}
+                            No file selected
+                        {% endif %}
+                    </div>
+                    <br>
+                    <button type="submit" class="upload-btn"><i class="fas fa-upload"></i> Upload Resume</button>
+                </form>
+
+                {% if messages %}
+                {% for message in messages %}
+                    <div class="popup {% if message.tags %}{{ message.tags }}{% endif %}">
+                        {% if message.tags == "error" %}
+                            <i class="fas fa-exclamation-circle"></i>
+                        {% elif message.tags == "success" %}
+                            <i class="fas fa-check-circle"></i>
+                        {% endif %}
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+
+            </div>
+
+            <div class="summary-section">
+                <div class="summary-box">
+                    <h4>Upload Guidelines</h4>
+                    <p>• PDF or Word documents only<br>
+                       • Maximum file size: 5MB<br>
+                       • File name format: YourName_Resume.pdf</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('file-input').addEventListener('change', function(e) {
+            const fileName = document.getElementById('file-name');
+            if (this.files.length > 0) {
+                fileName.textContent = "Selected file: " + this.files[0].name;
+            } else {
+                fileName.textContent = 'No file selected';
+            }
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Employee Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* Base Layout Fixes */
+        html {
+            overflow-x: hidden;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        /* Navbar and Sidebar Positioning */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+    
+        .sidebar {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            bottom: 0;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px 20px;
+            color: #fff;
+            z-index: 999;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+    
+        /* Content Area */
+        .content {
+            margin-left: 250px;
+            margin-top: 70px;
+            padding: 30px;
+            flex-grow: 1;
+            box-sizing: border-box;
+        }
+    
+        /* Notification Styles */
+        .notification-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+    
+        .notification-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+    
+        .notification-header {
+            background-color: #ff9800;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .notification-header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+    
+        .notification-toggle {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    
+        .notification-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    
+        .notification-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+    
+        .notification-item:hover {
+            background-color: #f9f9f9;
+        }
+    
+        .notification-item.unread {
+            background-color: #f0f7ff;
+        }
+    
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+    
+        .notification-icon.salary {
+            background-color: #4CAF50;
+            color: white;
+        }
+    
+        .notification-icon.leave {
+            background-color: #2196F3;
+            color: white;
+        }
+    
+        .notification-icon.tax {
+            background-color: #FF5722;
+            color: white;
+        }
+    
+        .notification-content {
+            flex-grow: 1;
+        }
+    
+        .notification-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    
+        .notification-message {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    
+        .notification-time {
+            color: #999;
+            font-size: 0.8rem;
+            text-align: right;
+            min-width: 80px;
+            margin-left: 15px;
+        }
+    
+        .notification-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+        }
+    
+        .mark-all-read {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+    
+        .mark-all-read:hover {
+            color: #333;
+        }
+    
+        .view-all {
+            color: #ff9800;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+    
+        .view-all:hover {
+            text-decoration: underline;
+        }
+    
+        /* Notification Settings */
+        .notification-settings {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 30px;
+        }
+    
+        .settings-title {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+    
+        .setting-label {
+            font-weight: bold;
+        }
+    
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+    
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+    
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+    
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+    
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    
+        .mark-as-read-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+    
+        .mark-as-read-button:hover {
+            background-color: #45a049;
+        }
+    
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0); 
+            background-color: rgba(0, 0, 0, 0.4); 
+        }
+    
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+    
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                width: 100%;
+                padding: 15px;
+            }
+    
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+    
+            .sidebar.active {
+                transform: translateX(0);
+            }
+    
+            .notification-container {
+                width: 100%;
+            }
+        }    
+        </style>
+        
+    </style>
+</head>
+<body>
+    {% include 'header1.html' %}
+    <div class="content">
+<!-- Salary Alerts Section -->
+<div class="notification-section">
+    <div class="notification-header">
+        {% if category == 'salary'%}
+        <h2><i class="fas fa-money-bill-wave" style="margin-right: 10px;"></i> Salary Alerts</h2>
+        {%elif category == 'leave' %}
+        <h2><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Leave Alerts</h2>
+        {%else%}
+        <h2><i class="fas fa-file-invoice-dollar" style="margin-right: 10px;"></i> Tax Reminders</h2>
+        {%endif%}
+    </div>
+    <div class="notification-list">
+        {% for notif in notifications %}
+        <!-- Inside the notification list -->
+        <div class="notification-item unread" id="notif-{{ notif.id }}">
+            {% if category == 'salary'%}
+            <div class="notification-icon salary">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            {%elif category == 'leave' %}
+            <div class="notification-icon leave">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            {%else%}
+            <div class="notification-icon tax">
+                <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            {%endif%}
+            
+            <div class="notification-content">
+                <div class="notification-title">{{ notif.title }}</div>
+                <div class="notification-message">{{ notif.message }}</div>
+            </div>
+            <div class="notification-time">{{ notif.timestamp|date:"M d, h:i A" }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+    <!-- Mobile Menu Toggle (for responsive design) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // For mobile menu toggle
+            const menuToggle = document.createElement('div');
+            menuToggle.className = 'mobile-menu-toggle';
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            menuToggle.style.position = 'fixed';
+            menuToggle.style.top = '20px';
+            menuToggle.style.left = '20px';
+            menuToggle.style.zIndex = '1001';
+            menuToggle.style.fontSize = '24px';
+            menuToggle.style.color = 'white';
+            menuToggle.style.cursor = 'pointer';
+            menuToggle.style.display = 'none';
+            
+            document.body.appendChild(menuToggle);
+            
+            const sidebar = document.querySelector('.sidebar');
+            
+            function checkScreenSize() {
+                if (window.innerWidth <= 768) {
+                    menuToggle.style.display = 'block';
+                    sidebar.classList.remove('active');
+                } else {
+                    menuToggle.style.display = 'none';
+                    sidebar.classList.add('active');
+                }
+            }
+            
+            menuToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+            });
+            
+            window.addEventListener('resize', checkScreenSize);
+            checkScreenSize();
+
+            // Notification toggle functionality
+            const notificationToggles = document.querySelectorAll('.notification-toggle');
+            notificationToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const section = this.closest('.notification-section');
+                    const list = section.querySelector('.notification-list');
+                    const icon = this.querySelector('i');
+                    
+                    if (list.style.display === 'none') {
+                        list.style.display = 'block';
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        list.style.display = 'none';
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>

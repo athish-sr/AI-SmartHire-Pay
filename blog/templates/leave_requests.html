@@ -1,0 +1,127 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Request Management</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            background: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-left: 270px;
+            margin-top: 90px;
+            margin-right:20px;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .approve, .reject {
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .approve {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .reject {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .cancel {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+{%include 'header.html'%}
+<div class="container">
+    <h2>Leave Requests Management</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Reason</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for leave_record in leave_records %}
+                <tr>
+                    <td>{{ leave_record.employee.first_name }} {{ leave_record.employee.last_name }}</td>
+                    <td>{{ leave_record.leave_type }}</td>
+                    <td>{{ leave_record.start_date }}</td>
+                    <td>{{ leave_record.end_date }}</td>
+                    <td>{{ leave_record.reason }}</td>
+                    <td>
+                        {% if leave_record.status == 'Pending' %}
+                            <form method="POST" action="{% url 'approve-leave' leave_record.id %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="leave_id" value="{{ leave_record.id }}">
+                                <button type="submit" name="status" value="Accepted" class="approve">Approve</button>
+                                <button type="submit" name="status" value="Rejected" class="reject">Reject</button>
+                            </form>
+                        {% else %}
+                            No actions available
+                        {% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No leave requests found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

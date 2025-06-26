@@ -1,0 +1,360 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary & Payslip Management - Employee Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Content area styling */
+        .content {
+            margin-left: 250px;
+            padding: 30px;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+            overflow-y: auto;
+            flex-grow: 1;
+            height: calc(100vh - 60px);
+        }
+
+        .content h2 {
+            text-align: center;
+            color: rgb(0,0,0);
+            margin-bottom: 30px;
+        }
+
+        /* Card styling */
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card h3 {
+            color: #333;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Payslip table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            table-layout: fixed;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Download buttons */
+        .download-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+
+        .download-btn i {
+            margin-right: 5px;
+        }
+
+        .pdf-btn {
+            background-color: #e74c3c;
+        }
+
+        .pdf-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .excel-btn {
+            background-color: #2ecc71;
+        }
+
+        .excel-btn:hover {
+            background-color: #27ae60;
+        }
+
+        /* Summary sections */
+        .summary-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .summary-box {
+            flex: 1;
+            min-width: 200px;
+            background: #f8f9fa;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 4px;
+        }
+
+        .summary-box h4 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        /* Year selector */
+        .year-selector {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .year-selector select {
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: white;
+            font-size: 16px;
+        }
+
+        /* Table scroll */
+        .table-wrapper {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 20px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sticky table header */
+        .table-wrapper table thead th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Custom scrollbar */
+        .table-wrapper::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding: 15px;
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .summary-section {
+                flex-direction: column;
+            }
+
+            .summary-box {
+                min-width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% include 'header1.html' %}
+
+    <!-- Content Area -->
+    <div class="content">
+        <h2>Salary & Payslip Management</h2>
+
+        <!-- View Payslips Card -->
+        <!-- View Payslips Card -->
+        <!-- Payslip Table Section -->
+<div class="card">
+    <h3>Payslip History</h3>
+    <form method="get" class="year-selector">
+        <label for="year">Select Year:</label>
+    <select name="year" id="year">
+        {% for year in available_years %}
+            <option value="{{ year }}" {% if year == selected_year %}selected{% endif %}>{{ year }}</option>
+        {% endfor %}
+    </select>
+    <button class='download-btn excel-btn' type="submit">Apply</button>
+</form>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Net Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in salaries %}
+                    <tr>
+                        <td>{{ s.month_name }} {{ s.salary_year }}</td>
+                        <td>${{ s.net_salary }}</td>
+                        <td>
+                            <a href="{% url 'payslip'  s.salary_month s.salary_year%} " 
+   class="download-btn excel-btn"
+   title="View payslip for {{ s.salary_month|date:'F' }} {{ s.salary_year }}">
+   <i class="fas fa-eye"></i> View Payslip
+</a>
+
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="3">No payslips found for {{ selected_year }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+        <!-- Salary Breakdown Card -->
+        <div class="card">
+            <h3>Salary Breakdown - April 2025</h3>
+            <p>Detailed view of your salary components including basic pay, allowances, deductions, and taxes.</p>
+            
+            <div class="summary-section">
+                <div class="summary-box">
+                    <h4>Earnings</h4>
+                    <p>Basic Salary: <span class="highlight">{{salary.basic_salary}}</span></p>
+                    <p>House Rent Allowance: <span class="highlight">{{salary.allowances}}</span></p>
+                    <p>Bonus: <span class="highlight">{{salary.bonus}}</span></p>
+                    <p><strong>Total Earnings: <span class="highlight">{{total_earnings}}</span></strong></p>
+                </div>
+                
+                <div class="summary-box">
+                    <h4>Deductions</h4>
+                    <p>Deduction: <span class="highlight">{{deductions}}</span></p>
+                    <p>Income Tax: <span class="highlight">{{income_tax}}</span></p>
+                    <p>Provident Fund: <span class="highlight">{{pf}}</span></p>
+                    <p>Professional Tax: <span class="highlight">{{professional_tax}}</span></p>
+                    <p><strong>Total Deductions: <span class="highlight">{{total_deductions}}</span></strong></p>
+                </div>
+                
+                <div class="summary-box">
+                    <h4>Net Salary</h4>
+                    <p><strong>Gross Salary: <span class="highlight">{{total_earnings}}</span></strong></p>
+                    <p><strong>Total Deductions: <span class="highlight">{{total_deductions}}</span></strong></p>
+                    <p><strong>Net Pay: <span class="highlight">{{salary.net_salary}}</span></strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yearly Summary Card -->
+        <div class="card">
+            <h3>Yearly Summary - 2025</h3>
+            <p>Annual salary statement for tax filing and financial planning.</p>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Earnings</td>
+                            <td>{{annual_earnings}}</td>
+                        </tr>
+                        <tr>
+                            <td>Total Tax Paid</td>
+                            <td>{{annual_tax_paid|floatformat:2}}</td>
+                        </tr>
+                        <tr>
+                            <td>Total Deduction</td>
+                            <td>{{annual_deduction}}</td>
+                        </tr>
+                        <tr>
+                            <td>Total Provident Fund</td>
+                            <td>{{ annual_pf|floatformat:2 }}</td>
+                        </tr>
+                        <tr>
+                            <td>Total Bonus</td>
+                            <td>{{annual_bonus}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Net Salary Received</strong></td>
+                            <td><strong>{{annual_net_salary}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="/report" class="download-btn pdf-btn" download>
+                    <i class="fas fa-file-pdf"></i> Download Annual Statement (PDF)
+                </a>                  
+                <a href="/download-salary-excel" class="download-btn excel-btn">
+                    <i class="fas fa-file-excel"></i> Download Annual Statement (Excel)
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tax Details Submitted</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            background: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-left: 270px;
+            margin-top: 50px;
+            padding: 40px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .submitted-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .submitted-field {
+            margin-bottom: 15px;
+        }
+        .submitted-field label {
+            font-weight: bold;
+            color: #555;
+        }
+        .submitted-value {
+            display: block;
+            padding: 8px 10px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'header1.html' %}
+    <div class="container">
+        <h2>Your Tax Details</h2>
+        <div class="submitted-box">
+            <p style="color: green; font-weight: bold;">You have already submitted your tax information.</p>
+            <br>
+            <div class="submitted-field">
+                <label>Rent Paid:</label>
+                <span class="submitted-value">{{ tax_input.rent_paid }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>LIC:</label>
+                <span class="submitted-value">{{ tax_input.lic }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>EPF:</label>
+                <span class="submitted-value">{{ tax_input.epf }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>Home Loan Principal:</label>
+                <span class="submitted-value">{{ tax_input.home_principal }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>Mutual Fund Investment:</label>
+                <span class="submitted-value">{{ tax_input.mutual_fund }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>NPS Contribution:</label>
+                <span class="submitted-value">{{ tax_input.nps_contribution }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>Health Insurance:</label>
+                <span class="submitted-value">{{ tax_input.health_insurance }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>Parent Health Insurance:</label>
+                <span class="submitted-value">{{ tax_input.parent_health }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>Home Loan Interest:</label>
+                <span class="submitted-value">{{ tax_input.home_loan_interest }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>Education Expense:</label>
+                <span class="submitted-value">{{ tax_input.education_expense }}</span>
+            </div>
+            <div class="submitted-field">
+                <label>Donations:</label>
+                <span class="submitted-value">{{ tax_input.donations }}</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,886 @@
+2025-05-12 20:09:18,099 - INFO - This is an info message
+2025-05-12 20:09:29,423 - WARNING - Not Found: /favicon.ico
+2025-05-12 20:09:36,311 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:09:41,429 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:09:43,943 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:13,907 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:15,378 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:16,209 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:16,982 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:17,740 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:21,230 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:22,015 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:25,675 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:11:45,073 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:16:34,740 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:16:35,558 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:16:46,937 - INFO - This is an info message
+2025-05-12 20:16:52,438 - WARNING - Not Found: /favicon.ico
+2025-05-12 20:17:07,945 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:17:08,736 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:17:09,454 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:17:49,748 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:19:55,933 - INFO - This is an info message
+2025-05-12 20:20:17,745 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 20:21:38,058 - WARNING - Not Found: /chatbot_reply/
+2025-05-12 21:22:27,006 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:27,098 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:30,834 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:30,854 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,167 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,177 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,287 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,295 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,572 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,586 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,748 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:31,760 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:32,784 - ERROR - Financial report error (2025): 
+fileName='year_comparison.png' identity=[ImageReader@0x294913341a0 filename='year_comparison.png'] Cannot open resource "year_comparison.png"
+2025-05-12 21:22:32,791 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:32,931 - ERROR - Financial report error (2025): 
+fileName='year_comparison.png' identity=[ImageReader@0x2948d13e750 filename='year_comparison.png'] Cannot open resource "year_comparison.png"
+2025-05-12 21:22:32,960 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:33,429 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:33,440 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:33,494 - ERROR - Financial report error (2025): 
+fileName='fund_trend.png' identity=[ImageReader@0x2949093f020 filename='fund_trend.png'] Cannot open resource "fund_trend.png"
+2025-05-12 21:22:33,494 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:33,558 - ERROR - Financial report error (2025): 
+fileName='fund_trend.png' identity=[ImageReader@0x2948d1d56d0 filename='fund_trend.png'] Cannot open resource "fund_trend.png"
+2025-05-12 21:22:33,558 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:35,211 - ERROR - Financial report error (2025): 
+fileName='dept_pie.png' identity=[ImageReader@0x294931bab70 filename='dept_pie.png'] Cannot open resource "dept_pie.png"
+2025-05-12 21:22:35,212 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:35,884 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:35,893 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:35,987 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:35,995 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:36,292 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:36,300 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:36,462 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:36,468 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:36,661 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:36,667 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-12 21:22:37,084 - ERROR - Financial report error (2025): [WinError 32] The process cannot access the file because it is being used by another process: 'year_comparison.png'
+2025-05-12 21:22:37,084 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:37,168 - ERROR - Financial report error (2025): 
+fileName='year_comparison.png' identity=[ImageReader@0x29494c96de0 filename='year_comparison.png'] Cannot open resource "year_comparison.png"
+2025-05-12 21:22:37,168 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:37,199 - ERROR - Financial report error (2025): 
+fileName='fund_trend.png' identity=[ImageReader@0x2948cf81910 filename='fund_trend.png'] Cannot open resource "fund_trend.png"
+2025-05-12 21:22:37,199 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:22:37,246 - ERROR - Financial report error (2025): 
+fileName='fund_trend.png' identity=[ImageReader@0x29493c2d7c0 filename='fund_trend.png'] Cannot open resource "fund_trend.png"
+2025-05-12 21:22:37,246 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-12 21:23:49,291 - WARNING - Not Found: /favicon.ico
+2025-05-12 21:34:56,416 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 21:39:48,891 - INFO - This is an info message
+2025-05-12 21:39:56,585 - WARNING - Not Found: /favicon.ico
+2025-05-12 21:42:26,271 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 21:42:41,848 - INFO - This is an info message
+2025-05-12 21:43:20,545 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\temp1.py changed, reloading.
+2025-05-12 21:43:25,751 - INFO - This is an info message
+2025-05-12 21:43:46,301 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\temp1.py changed, reloading.
+2025-05-12 21:43:51,738 - INFO - This is an info message
+2025-05-12 21:44:00,911 - WARNING - Not Found: /favicon.ico
+2025-05-12 21:46:49,944 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 21:46:55,190 - INFO - This is an info message
+2025-05-12 21:47:56,621 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 21:48:02,339 - INFO - This is an info message
+2025-05-12 21:50:01,951 - INFO - Negotiation closed: {'final_offer': 7.2, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [7.2], 'offered_benefits': {}, 'conversation_history': [], 'timestamp': '2025-05-12T21:50:01.951134'}
+2025-05-12 21:53:00,384 - INFO - Llama API Prompt: The candidate Athish S R is being offered the position of Data Scientist. Their profile suggests their experience and skills. The initial salary offer is 10.8 LPA, while the market range is 8.0-16.6094075 LPA. Generate the HR's next response to the candidate's initial reaction: 'but this was below my expection i expect around 13 lpa sir ,can you offer that ?'.Focus on justifying the offer, highlighting benefits, and being open to further discussion.
+2025-05-12 21:53:31,020 - INFO - Llama API Raw Response: Here's a possible response from the HR:
+
+"Thank you for sharing your expectations with us, Athish. We understand that you have certain salary requirements in mind. Our initial offer of 10.8 LPA is based on a thorough analysis of your profile and our company's compensation structure.
+
+That being said, we're willing to revisit the numbers and consider adjustments based on market conditions. However, I'd like to highlight some additional benefits that we offer as part of this role:
+
+* A competitive bonus structure tied to individual and team performance
+* Opportunities for professional growth and advancement within the organization
+* Access to cutting-edge technology and resources to support your work as a Data Scientist
+* A comprehensive health insurance package and other perks
+
+Regarding your expectation of 13 LPA, I'd like to discuss this further with you. Can you tell me more about what factors led you to arrive at that number? Are there specific companies or roles in the market that you've researched and feel are comparable?
+
+We're open to negotiation and willing to revisit our offer if we can find a mutually agreeable solution. Let's work together to see if we can meet your expectations while also being mindful of our company's budget and compensation policies."
+
+This response acknowledges the candidate's concerns, highlights additional benefits, and invites further discussion on the salary. By asking questions about their research and expectations, the HR is able to better understand the candidate's perspective and potentially find common ground for a revised offer.
+2025-05-12 21:53:32,697 - INFO - HR Response: We're pleased to offer 11.23 LPA. Here's a possible response from the HR:
+
+"Thank you for sharing your expectations with us, Athish. We understand that you have certain salary requirements in mind. Our initial offer of 10.8 LPA is based on a thorough analysis of your profile and our company's compensation structure.
+
+That being said, we're willing to revisit the numbers and consider adjustments based on market conditions. However, I'd like to highlight some additional benefits that we offer as part of this role:
+
+* A competitive bonus structure tied to individual and team performance
+* Opportunities for professional growth and advancement within the organization
+* Access to cutting-edge technology and resources to support your work as a Data Scientist
+* A comprehensive health insurance package and other perks
+
+Regarding your expectation of 13 LPA, I'd like to discuss this further with you. Can you tell me more about what factors led you to arrive at that number? Are there specific companies or roles in the market that you've researched and feel are comparable?
+
+We're open to negotiation and willing to revisit our offer if we can find a mutually agreeable solution. Let's work together to see if we can meet your expectations while also being mindful of our company's budget and compensation policies."
+
+This response acknowledges the candidate's concerns, highlights additional benefits, and invites further discussion on the salary. By asking questions about their research and expectations, the HR is able to better understand the candidate's perspective and potentially find common ground for a revised offer. (Offer: 11.23)
+2025-05-12 21:54:47,518 - INFO - Negotiation closed: {'final_offer': 11.23, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [10.8, 11.23], 'offered_benefits': {}, 'conversation_history': [{'role': 'candidate', 'text': 'but this was below my expection i expect around 13 lpa sir ,can you offer that ?', 'timestamp': '2025-05-12T21:53:00.361326'}, {'role': 'hr', 'text': 'We\'re pleased to offer 11.23 LPA. Here\'s a possible response from the HR:\n\n"Thank you for sharing your expectations with us, Athish. We understand that you have certain salary requirements in mind. Our initial offer of 10.8 LPA is based on a thorough analysis of your profile and our company\'s compensation structure.\n\nThat being said, we\'re willing to revisit the numbers and consider adjustments based on market conditions. However, I\'d like to highlight some additional benefits that we offer as part of this role:\n\n* A competitive bonus structure tied to individual and team performance\n* Opportunities for professional growth and advancement within the organization\n* Access to cutting-edge technology and resources to support your work as a Data Scientist\n* A comprehensive health insurance package and other perks\n\nRegarding your expectation of 13 LPA, I\'d like to discuss this further with you. Can you tell me more about what factors led you to arrive at that number? Are there specific companies or roles in the market that you\'ve researched and feel are comparable?\n\nWe\'re open to negotiation and willing to revisit our offer if we can find a mutually agreeable solution. Let\'s work together to see if we can meet your expectations while also being mindful of our company\'s budget and compensation policies."\n\nThis response acknowledges the candidate\'s concerns, highlights additional benefits, and invites further discussion on the salary. By asking questions about their research and expectations, the HR is able to better understand the candidate\'s perspective and potentially find common ground for a revised offer.', 'timestamp': '2025-05-12T21:53:32.697464'}], 'timestamp': '2025-05-12T21:54:47.518698'}
+2025-05-12 23:31:39,338 - INFO - This is an info message
+2025-05-12 23:35:10,932 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:35:19,135 - INFO - This is an info message
+2025-05-12 23:35:22,786 - WARNING - Not Found: /favicon.ico
+2025-05-12 23:36:55,376 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:37:03,237 - INFO - This is an info message
+2025-05-12 23:38:29,529 - INFO - This is an info message
+2025-05-12 23:38:34,461 - WARNING - Not Found: /favicon.ico
+2025-05-12 23:43:40,755 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:43:45,048 - INFO - This is an info message
+2025-05-12 23:43:48,311 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:43:54,068 - INFO - This is an info message
+2025-05-12 23:49:25,983 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\illama_resume_weakness.py changed, reloading.
+2025-05-12 23:49:30,255 - INFO - This is an info message
+2025-05-12 23:49:41,840 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\illama_resume_weakness.py changed, reloading.
+2025-05-12 23:49:45,940 - INFO - This is an info message
+2025-05-12 23:49:56,461 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\illama_resume_weakness.py changed, reloading.
+2025-05-12 23:50:00,629 - INFO - This is an info message
+2025-05-12 23:50:25,630 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\illama_resume_weakness.py changed, reloading.
+2025-05-12 23:50:29,930 - INFO - This is an info message
+2025-05-12 23:54:51,012 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:54:55,327 - INFO - This is an info message
+2025-05-12 23:54:58,558 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:55:02,804 - INFO - This is an info message
+2025-05-12 23:58:07,579 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:58:11,982 - INFO - This is an info message
+2025-05-12 23:58:16,395 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-12 23:58:20,577 - INFO - This is an info message
+2025-05-12 23:58:57,957 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\illama_resume_weakness.py changed, reloading.
+2025-05-12 23:59:02,016 - INFO - This is an info message
+2025-05-12 23:59:23,912 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\illama_resume_weakness.py changed, reloading.
+2025-05-12 23:59:27,986 - INFO - This is an info message
+2025-05-13 00:02:49,237 - INFO - Llama API Prompt: The candidate Athish S R is being offered the position of Full Stack Developer. Their profile suggests their experience and skills. The initial salary offer is 648000.0 LPA, while the market range is 450000-1200000 LPA. Generate the HR's next response to the candidate's initial reaction: 'i thought the salary you are too low for my knowledge'.Focus on justifying the offer, highlighting benefits, and being open to further discussion.
+2025-05-13 00:03:11,107 - INFO - Llama API Raw Response: Here's a potential response from the HR:
+
+"Dear Athish,
+
+Thank you for sharing your thoughts on the initial salary offer. We appreciate your candor and value your feedback.
+
+Firstly, I'd like to acknowledge that your skills and experience align well with the requirements of our Full Stack Developer position. Your profile indicates that you have a strong foundation in programming languages, frameworks, and databases, which would be an excellent fit for our team.
+
+Regarding the salary offer, we took into account not only your technical expertise but also your overall experience and the market range for similar roles. While the initial offer may seem lower than what you were expecting, I'd like to highlight some additional benefits that come with this position:
+
+* Comprehensive health insurance package
+* Flexible work-from-home options (up to 2 days a week)
+* Professional development opportunities through internal training programs and external workshops
+* A dynamic and supportive team environment with regular team-building activities
+
+We believe these benefits, combined with the salary offer, provide a competitive compensation package. However, we also want to assure you that we're open to discussing the details further.
+
+If you'd like to schedule a call to discuss your expectations and concerns in more detail, I'm happy to accommodate that. We value your input and would like to tailor the offer to meet your needs while staying within our budget constraints.
+
+Please let me know if this is something you'd be interested in, and we can schedule a time that suits you best.
+
+Best regards,
+[HR Representative's Name]"
+2025-05-13 00:03:12,490 - INFO - HR Response: We're pleased to offer 660960.0 LPA. Here's a potential response from the HR:
+
+"Dear Athish,
+
+Thank you for sharing your thoughts on the initial salary offer. We appreciate your candor and value your feedback.
+
+Firstly, I'd like to acknowledge that your skills and experience align well with the requirements of our Full Stack Developer position. Your profile indicates that you have a strong foundation in programming languages, frameworks, and databases, which would be an excellent fit for our team.
+
+Regarding the salary offer, we took into account not only your technical expertise but also your overall experience and the market range for similar roles. While the initial offer may seem lower than what you were expecting, I'd like to highlight some additional benefits that come with this position:
+
+* Comprehensive health insurance package
+* Flexible work-from-home options (up to 2 days a week)
+* Professional development opportunities through internal training programs and external workshops
+* A dynamic and supportive team environment with regular team-building activities
+
+We believe these benefits, combined with the salary offer, provide a competitive compensation package. However, we also want to assure you that we're open to discussing the details further.
+
+If you'd like to schedule a call to discuss your expectations and concerns in more detail, I'm happy to accommodate that. We value your input and would like to tailor the offer to meet your needs while staying within our budget constraints.
+
+Please let me know if this is something you'd be interested in, and we can schedule a time that suits you best.
+
+Best regards,
+[HR Representative's Name]" (Offer: 660960.0)
+2025-05-13 00:05:30,855 - INFO - Negotiation closed: {'final_offer': 660960.0, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [648000.0, 660960.0], 'offered_benefits': {}, 'conversation_history': [{'role': 'candidate', 'text': 'i thought the salary you are too low for my knowledge', 'timestamp': '2025-05-13T00:02:49.218000'}, {'role': 'hr', 'text': 'We\'re pleased to offer 660960.0 LPA. Here\'s a potential response from the HR:\n\n"Dear Athish,\n\nThank you for sharing your thoughts on the initial salary offer. We appreciate your candor and value your feedback.\n\nFirstly, I\'d like to acknowledge that your skills and experience align well with the requirements of our Full Stack Developer position. Your profile indicates that you have a strong foundation in programming languages, frameworks, and databases, which would be an excellent fit for our team.\n\nRegarding the salary offer, we took into account not only your technical expertise but also your overall experience and the market range for similar roles. While the initial offer may seem lower than what you were expecting, I\'d like to highlight some additional benefits that come with this position:\n\n* Comprehensive health insurance package\n* Flexible work-from-home options (up to 2 days a week)\n* Professional development opportunities through internal training programs and external workshops\n* A dynamic and supportive team environment with regular team-building activities\n\nWe believe these benefits, combined with the salary offer, provide a competitive compensation package. However, we also want to assure you that we\'re open to discussing the details further.\n\nIf you\'d like to schedule a call to discuss your expectations and concerns in more detail, I\'m happy to accommodate that. We value your input and would like to tailor the offer to meet your needs while staying within our budget constraints.\n\nPlease let me know if this is something you\'d be interested in, and we can schedule a time that suits you best.\n\nBest regards,\n[HR Representative\'s Name]"', 'timestamp': '2025-05-13T00:03:12.490967'}], 'timestamp': '2025-05-13T00:05:30.855177'}
+2025-05-13 00:08:32,101 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:08:41,176 - INFO - This is an info message
+2025-05-13 00:09:11,698 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:09:15,756 - INFO - This is an info message
+2025-05-13 00:13:22,895 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:13:27,128 - INFO - This is an info message
+2025-05-13 00:14:10,129 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\model\illama_resume_weakness.py changed, reloading.
+2025-05-13 00:14:14,350 - INFO - This is an info message
+2025-05-13 00:16:27,870 - INFO - Llama API Prompt: The candidate Athish S R is being offered the position of Data Scientist. Their profile suggests their experience and skills. The initial salary offer is 648000.0 LPA, while the market range is 450000-1200000 LPA. Generate the HR's next response to the candidate's initial reaction: 'i think the salary is too low for my skills'.Focus on justifying the offer, highlighting benefits, and being open to further discussion.
+2025-05-13 00:16:49,696 - INFO - Llama API Raw Response: Here's a potential response from the HR:
+
+"Dear Athish,
+
+Thank you for your prompt response. We appreciate your interest in joining our organization as a Data Scientist. I understand that the initial salary offer may not meet your expectations, given your impressive skills and experience.
+
+I'd like to provide some context on why we offered 648000 LPA. Our market research indicates that this is within the lower end of the competitive range for a Data Scientist with similar qualifications and experience in the industry. We're confident that you'll be a valuable addition to our team, and we believe your contributions will far exceed your initial compensation.
+
+However, I want to assure you that we're open to negotiations and willing to revisit the salary offer if needed. We also offer a comprehensive benefits package, which includes health insurance, retirement savings plan, flexible work arrangements, and professional development opportunities. These benefits are designed to enhance your overall compensation and quality of life.
+
+In addition to the initial salary, we'd like to highlight some unique perks that set us apart from other companies in the industry:
+
+* A competitive bonus structure tied to individual and team performance
+* Opportunities for career growth and advancement within the company
+* Access to cutting-edge technologies and tools for data analysis and visualization
+* Collaborative work environment with a diverse and talented team
+
+We value your feedback and would like to discuss this further. If you're willing, we could schedule a call to explore ways to meet your expectations while ensuring our business goals are aligned.
+
+Please let us know if there's anything else we can do to make the offer more attractive to you. We look forward to hearing from you soon.
+
+Best regards,
+[HR Representative]"
+2025-05-13 00:16:51,025 - INFO - HR Response: We're pleased to offer 680400.0 LPA. Here's a potential response from the HR:
+
+"Dear Athish,
+
+Thank you for your prompt response. We appreciate your interest in joining our organization as a Data Scientist. I understand that the initial salary offer may not meet your expectations, given your impressive skills and experience.
+
+I'd like to provide some context on why we offered 648000 LPA. Our market research indicates that this is within the lower end of the competitive range for a Data Scientist with similar qualifications and experience in the industry. We're confident that you'll be a valuable addition to our team, and we believe your contributions will far exceed your initial compensation.
+
+However, I want to assure you that we're open to negotiations and willing to revisit the salary offer if needed. We also offer a comprehensive benefits package, which includes health insurance, retirement savings plan, flexible work arrangements, and professional development opportunities. These benefits are designed to enhance your overall compensation and quality of life.
+
+In addition to the initial salary, we'd like to highlight some unique perks that set us apart from other companies in the industry:
+
+* A competitive bonus structure tied to individual and team performance
+* Opportunities for career growth and advancement within the company
+* Access to cutting-edge technologies and tools for data analysis and visualization
+* Collaborative work environment with a diverse and talented team
+
+We value your feedback and would like to discuss this further. If you're willing, we could schedule a call to explore ways to meet your expectations while ensuring our business goals are aligned.
+
+Please let us know if there's anything else we can do to make the offer more attractive to you. We look forward to hearing from you soon.
+
+Best regards,
+[HR Representative]" (Offer: 680400.0)
+2025-05-13 00:20:49,892 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:21:06,773 - INFO - This is an info message
+2025-05-13 00:21:11,162 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:21:15,203 - INFO - This is an info message
+2025-05-13 00:22:11,505 - INFO - Llama API Prompt: The candidate Athish S R is being offered the position of Data Scientist. Their profile suggests their experience and skills. The initial salary offer is 648000.0 LPA, while the market range is 450000-1200000 LPA. Generate the HR's next response to the candidate's initial reaction: 'i think the salary is too low for my skills'.Focus on justifying the offer, highlighting benefits, and being open to further discussion.
+2025-05-13 00:22:31,120 - INFO - Llama API Raw Response: Here's a potential response from the HR:
+
+"Dear Athish,
+
+Thank you for considering our offer and sharing your concerns about the salary. We appreciate your candor and value your input in this process.
+
+We understand that the market range is indeed broad, but we've taken into account not only your technical skills and experience but also your achievements and impact in your previous roles. Our initial offer of 648000 LPA reflects our confidence in your abilities to make a significant contribution to our organization.
+
+However, we'd like to highlight some benefits that may offset the salary:
+
+* A comprehensive benefits package, including medical insurance, retirement plan, and paid time off
+* Opportunities for professional growth and development through training programs, workshops, and mentorship
+* A dynamic and collaborative work environment with a diverse team of experts in various fields
+* Flexible work arrangements to promote work-life balance
+
+We're open to revisiting the salary discussion if you'd like to share more about your expectations or provide additional context. We believe our offer is competitive within the industry, but we're willing to consider adjustments based on your unique circumstances.
+
+If you'd like to schedule a call to discuss further, please let us know a convenient time for you. We value your feedback and look forward to continuing this conversation.
+
+Best regards,
+[Your Name]
+HR Representative"
+2025-05-13 00:22:32,535 - INFO - HR Response: We're pleased to offer 680400.0 LPA. Here's a potential response from the HR:
+
+"Dear Athish,
+
+Thank you for considering our offer and sharing your concerns about the salary. We appreciate your candor and value your input in this process.
+
+We understand that the market range is indeed broad, but we've taken into account not only your technical skills and experience but also your achievements and impact in your previous roles. Our initial offer of 648000 LPA reflects our confidence in your abilities to make a significant contribution to our organization.
+
+However, we'd like to highlight some benefits that may offset the salary:
+
+* A comprehensive benefits package, including medical insurance, retirement plan, and paid time off
+* Opportunities for professional growth and development through training programs, workshops, and mentorship
+* A dynamic and collaborative work environment with a diverse team of experts in various fields
+* Flexible work arrangements to promote work-life balance
+
+We're open to revisiting the salary discussion if you'd like to share more about your expectations or provide additional context. We believe our offer is competitive within the industry, but we're willing to consider adjustments based on your unique circumstances.
+
+If you'd like to schedule a call to discuss further, please let us know a convenient time for you. We value your feedback and look forward to continuing this conversation.
+
+Best regards,
+[Your Name]
+HR Representative" (Offer: 680400.0)
+2025-05-13 00:28:11,097 - INFO - Llama API Prompt: The candidate Athish S R is being offered the position of Data Scientist. Their profile suggests their experience and skills. The initial salary offer is 648000.0 LPA, while the market range is 450000-1200000 LPA. Generate the HR's next response to the candidate's initial reaction: 'i think the salary is too low for my skills'.Focus on justifying the offer, highlighting benefits, and being open to further discussion.
+2025-05-13 00:28:40,262 - INFO - Llama API Raw Response: Here's a possible response from the HR:
+
+"Dear Athish,
+
+Thank you for your prompt response and for sharing your thoughts about the initial salary offer. We appreciate your candor and understand that our offer may not meet your expectations.
+
+We'd like to take this opportunity to explain why we arrived at the figure of 648,000 LPA. Based on your profile and the skills you bring to the table, we believe you would be a valuable addition to our team. Your experience in machine learning, data engineering, and statistical modeling is impressive, and we're confident that you'll make significant contributions to our organization.
+
+That being said, we also recognize that you have a range of skills that are highly sought after in the market. We've taken this into account when making our offer, but we understand that it may not be at the higher end of your expectations.
+
+We'd like to highlight some benefits that come with working for our organization:
+
+* A competitive bonus structure tied to individual and team performance
+* Opportunities for professional growth and development through training programs and mentorship
+* A dynamic and inclusive work environment that fosters collaboration and innovation
+* A generous stock option plan that allows you to participate in the company's success
+
+We're open to discussing the salary further and exploring options for adjusting it. Could you please share with us what specific aspects of your skills and experience you think are not reflected in our initial offer? This will help us better understand your perspective and work towards a mutually beneficial agreement.
+
+Let's schedule a follow-up call to discuss this further and see if we can find common ground. We're excited about the possibility of having you join our team and look forward to continuing the conversation."
+
+This response aims to:
+
+* Justify the initial salary offer by highlighting the candidate's skills and experience
+* Emphasize the benefits and perks that come with working for the organization
+* Show willingness to discuss and adjust the salary further
+* Encourage open communication and collaboration to find a mutually beneficial agreement
+2025-05-13 00:28:43,003 - INFO - HR Response: We're pleased to offer 667440.0 LPA. Here's a possible response from the HR:
+
+"Dear Athish,
+
+Thank you for your prompt response and for sharing your thoughts about the initial salary offer. We appreciate your candor and understand that our offer may not meet your expectations.
+
+We'd like to take this opportunity to explain why we arrived at the figure of 648,000 LPA. Based on your profile and the skills you bring to the table, we believe you would be a valuable addition to our team. Your experience in machine learning, data engineering, and statistical modeling is impressive, and we're confident that you'll make significant contributions to our organization.
+
+That being said, we also recognize that you have a range of skills that are highly sought after in the market. We've taken this into account when making our offer, but we understand that it may not be at the higher end of your expectations.
+
+We'd like to highlight some benefits that come with working for our organization:
+
+* A competitive bonus structure tied to individual and team performance
+* Opportunities for professional growth and development through training programs and mentorship
+* A dynamic and inclusive work environment that fosters collaboration and innovation
+* A generous stock option plan that allows you to participate in the company's success
+
+We're open to discussing the salary further and exploring options for adjusting it. Could you please share with us what specific aspects of your skills and experience you think are not reflected in our initial offer? This will help us better understand your perspective and work towards a mutually beneficial agreement.
+
+Let's schedule a follow-up call to discuss this further and see if we can find common ground. We're excited about the possibility of having you join our team and look forward to continuing the conversation."
+
+This response aims to:
+
+* Justify the initial salary offer by highlighting the candidate's skills and experience
+* Emphasize the benefits and perks that come with working for the organization
+* Show willingness to discuss and adjust the salary further
+* Encourage open communication and collaboration to find a mutually beneficial agreement (Offer: 667440.0)
+2025-05-13 00:29:10,923 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:29:15,485 - INFO - This is an info message
+2025-05-13 00:32:54,903 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:32:58,976 - INFO - This is an info message
+2025-05-13 00:33:04,016 - INFO - This is an info message
+2025-05-13 00:33:38,502 - INFO - Negotiation closed: {'final_offer': 648000.0, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [648000.0], 'offered_benefits': {}, 'conversation_history': [], 'timestamp': '2025-05-13T00:33:38.502619'}
+2025-05-13 00:36:36,424 - INFO - Negotiation closed: {'final_offer': 648000.0, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [648000.0], 'offered_benefits': {}, 'conversation_history': [], 'timestamp': '2025-05-13T00:36:36.424065'}
+2025-05-13 00:37:49,695 - INFO - Llama API Prompt: The candidate Athish S R is being offered the position of Full Stack Developer. Their profile suggests their experience and skills. The initial salary offer is 648000.0 LPA, while the market range is 450000-1200000 LPA. Generate the HR's next response to the candidate's initial reaction: 'i dont want the offer'.Focus on justifying the offer, highlighting benefits, and being open to further discussion.
+2025-05-13 00:38:16,878 - INFO - Llama API Raw Response: Here's a potential response from the HR:
+
+Dear Athish,
+
+Thank you for considering our offer. We're thrilled that you were interested in joining our team as a Full Stack Developer. However, we understand your hesitation regarding the initial salary offer.
+
+We'd like to take this opportunity to explain why we believe the offered compensation is competitive and reflective of your skills and experience. Our research indicates that your expertise and qualifications place you within the top 10% of candidates in the market. Given this, we've made a generous offer that takes into account not only your technical abilities but also your potential impact on our organization.
+
+We'd like to highlight some additional benefits that come with joining our team:
+
+* A comprehensive health insurance plan for you and your family
+* A flexible work-from-home policy to ensure a healthy work-life balance
+* Opportunities for professional growth and development, including training programs and mentorship initiatives
+* A dynamic and collaborative work environment with a talented team of developers and engineers
+* Access to the latest technologies and tools, ensuring you'll have the resources needed to excel in your role
+
+We understand that salary is just one aspect of an employment package. We're open to discussing the compensation further and exploring ways to tailor it to meet your expectations.
+
+If you're willing, we'd love to schedule a call to discuss this further and answer any questions you may have. We believe our team can offer you a rewarding experience and opportunities for growth that align with your career goals.
+
+Please let us know if you're available for a discussion at your convenience.
+
+Best regards,
+[Your Name]
+HR Representative
+2025-05-13 00:38:18,925 - INFO - HR Response: We're pleased to offer 680400.0 LPA. Here's a potential response from the HR:
+
+Dear Athish,
+
+Thank you for considering our offer. We're thrilled that you were interested in joining our team as a Full Stack Developer. However, we understand your hesitation regarding the initial salary offer.
+
+We'd like to take this opportunity to explain why we believe the offered compensation is competitive and reflective of your skills and experience. Our research indicates that your expertise and qualifications place you within the top 10% of candidates in the market. Given this, we've made a generous offer that takes into account not only your technical abilities but also your potential impact on our organization.
+
+We'd like to highlight some additional benefits that come with joining our team:
+
+* A comprehensive health insurance plan for you and your family
+* A flexible work-from-home policy to ensure a healthy work-life balance
+* Opportunities for professional growth and development, including training programs and mentorship initiatives
+* A dynamic and collaborative work environment with a talented team of developers and engineers
+* Access to the latest technologies and tools, ensuring you'll have the resources needed to excel in your role
+
+We understand that salary is just one aspect of an employment package. We're open to discussing the compensation further and exploring ways to tailor it to meet your expectations.
+
+If you're willing, we'd love to schedule a call to discuss this further and answer any questions you may have. We believe our team can offer you a rewarding experience and opportunities for growth that align with your career goals.
+
+Please let us know if you're available for a discussion at your convenience.
+
+Best regards,
+[Your Name]
+HR Representative (Offer: 680400.0)
+2025-05-13 00:39:51,787 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:39:57,760 - INFO - This is an info message
+2025-05-13 00:40:02,044 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:40:07,281 - INFO - This is an info message
+2025-05-13 00:40:17,651 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:40:23,572 - INFO - This is an info message
+2025-05-13 00:42:11,295 - INFO - Negotiation closed: {'final_offer': 648000.0, 'status': 'declined', 'concession_steps': 0, 'offer_history': [648000.0], 'offered_benefits': {}, 'conversation_history': [], 'timestamp': '2025-05-13T00:42:11.295791'}
+2025-05-13 00:47:14,634 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:47:20,678 - INFO - This is an info message
+2025-05-13 00:47:59,752 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:48:05,620 - INFO - This is an info message
+2025-05-13 00:48:19,335 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\urls.py changed, reloading.
+2025-05-13 00:48:25,603 - INFO - This is an info message
+2025-05-13 00:48:33,967 - ERROR - Internal Server Error: /upload/
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py", line 2004, in upload_resume
+    cache.set(f'processing_{processing_id}', False, timeout=300)  # 5 minute timeout
+    ^^^^^
+NameError: name 'cache' is not defined
+2025-05-13 00:49:02,019 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:49:07,947 - INFO - This is an info message
+2025-05-13 00:51:44,325 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:51:50,326 - INFO - This is an info message
+2025-05-13 00:51:54,369 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:52:19,254 - INFO - This is an info message
+2025-05-13 00:52:24,431 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:52:30,434 - INFO - This is an info message
+2025-05-13 00:52:40,778 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:52:46,781 - INFO - This is an info message
+2025-05-13 00:52:57,763 - WARNING - Not Found: /favicon.ico
+2025-05-13 00:53:19,114 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py", line 63, in login_view
+    return redirect('upload')
+           ^^^^^^^^^^
+TypeError: redirect() missing 1 required positional argument: 'to'
+2025-05-13 00:53:44,550 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:53:50,351 - INFO - This is an info message
+2025-05-13 00:54:25,986 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:54:35,230 - INFO - This is an info message
+2025-05-13 00:54:46,621 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 00:54:52,445 - INFO - This is an info message
+2025-05-13 01:01:41,039 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 01:01:47,066 - INFO - This is an info message
+2025-05-13 01:01:52,400 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 01:01:58,270 - INFO - This is an info message
+2025-05-13 01:02:50,637 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 01:02:56,519 - INFO - This is an info message
+2025-05-13 01:04:28,401 - WARNING - Not Found: /favicon.ico
+2025-05-13 01:08:56,687 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 01:09:02,731 - INFO - This is an info message
+2025-05-13 01:10:04,564 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 01:10:10,434 - INFO - This is an info message
+2025-05-13 01:21:46,585 - INFO - This is an info message
+2025-05-13 01:22:35,877 - INFO - Negotiation closed: {'final_offer': 648000.0, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [648000.0], 'offered_benefits': {}, 'conversation_history': [], 'timestamp': '2025-05-13T01:22:35.877371'}
+2025-05-13 01:24:51,354 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 01:24:57,456 - INFO - This is an info message
+2025-05-13 01:27:43,079 - INFO - Negotiation closed: {'final_offer': 648000.0, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [648000.0], 'offered_benefits': {}, 'conversation_history': [], 'timestamp': '2025-05-13T01:27:43.079969'}
+2025-05-13 01:28:01,642 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 01:28:08,083 - INFO - This is an info message
+2025-05-13 01:28:50,402 - INFO - Negotiation closed: {'final_offer': 648000.0, 'status': 'accepted', 'concession_steps': 0, 'offer_history': [648000.0], 'offered_benefits': {}, 'conversation_history': [], 'timestamp': '2025-05-13T01:28:50.402351'}
+2025-05-13 01:31:13,391 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 11:00:52,758 - INFO - This is an info message
+2025-05-13 11:00:58,667 - WARNING - Not Found: /favicon.ico
+2025-05-13 11:04:22,652 - ERROR - Internal Server Error: /salary/operations/
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py", line 587, in salary_operations_view
+    Fund.objects.create(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+2025-05-13 11:04:39,619 - ERROR - Internal Server Error: /salary/operations/
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py", line 587, in salary_operations_view
+    Fund.objects.create(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+2025-05-13 11:05:03,451 - ERROR - Internal Server Error: /salary/operations/
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py", line 587, in salary_operations_view
+    Fund.objects.create(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+2025-05-13 11:05:09,078 - ERROR - Internal Server Error: /salary/operations/
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py", line 587, in salary_operations_view
+    Fund.objects.create(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+
+2025-05-13 11:05:14,015 - ERROR - Internal Server Error: /salary/operations/
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+CONTEXT:  PL/pgSQL assignment "NEW.available_funds := (SELECT available_funds FROM fund ORDER BY id DESC LIMIT 1) + NEW.credit - NEW.debit"
+PL/pgSQL function update_available_funds() line 8 at assignment
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py", line 587, in salary_operations_view
+    Fund.objects.create(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: numeric field overflow
+DETAIL:  A field with precision 12, scale 2 must round to an absolute value less than 10^10.
+CONTEXT:  PL/pgSQL assignment "NEW.available_funds := (SELECT available_funds FROM fund ORDER BY id DESC LIMIT 1) + NEW.credit - NEW.debit"
+PL/pgSQL function update_available_funds() line 8 at assignment
+
+2025-05-13 13:36:33,972 - INFO - This is an info message
+2025-05-13 13:36:39,355 - WARNING - Not Found: /favicon.ico
+2025-05-13 13:38:43,036 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,049 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,215 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,238 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,392 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,405 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,567 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,574 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,726 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,733 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,888 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:43,895 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:45,294 - ERROR - Financial report error (2025): [WinError 2] The system cannot find the file specified: 'dept_pie.png'
+2025-05-13 13:38:45,295 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-13 13:38:45,370 - ERROR - Financial report error (2025): 
+fileName='dept_pie.png' identity=[ImageReader@0x1daec304a40 filename='dept_pie.png'] Cannot open resource "dept_pie.png"
+2025-05-13 13:38:45,377 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-13 13:38:46,065 - ERROR - Financial report error (2025): 
+fileName='fund_trend.png' identity=[ImageReader@0x1daec24ae10 filename='fund_trend.png'] Cannot open resource "fund_trend.png"
+2025-05-13 13:38:46,072 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-13 13:38:46,205 - ERROR - Financial report error (2025): 
+fileName='fund_trend.png' identity=[ImageReader@0x1daedb5ca70 filename='fund_trend.png'] Cannot open resource "fund_trend.png"
+2025-05-13 13:38:46,206 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-13 13:38:47,705 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:47,717 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:47,869 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:47,880 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:48,018 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:48,034 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:38:48,668 - ERROR - Financial report error (2025): [WinError 2] The system cannot find the file specified: 'year_comparison.png'
+2025-05-13 13:38:48,669 - ERROR - Internal Server Error: /financial-report/2025
+2025-05-13 13:39:24,855 - WARNING - Not Found: /favicon.ico
+2025-05-13 13:39:41,696 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:39:41,703 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-05-13 13:46:48,718 - INFO - Llama API Prompt: The candidate Candidate is being offered the position of the position. Their profile suggests their experience and skills. The initial salary offer is an amount INR, while the market range is a value-a value INR. Generate the HR's next response to the candidate's initial reaction: ''.Focus on justifying the offer, highlighting benefits, and being open to further discussion.
+2025-05-13 13:47:07,991 - INFO - Llama API Raw Response: Here's the HR's potential response:
+
+"Dear Candidate,
+
+Thank you for your prompt response. We appreciate your consideration of our offer, and we're glad you're interested in joining our team.
+
+Regarding the initial salary offer, we understand that it may be slightly below the market range. However, we'd like to highlight a few points that make this position unique and attractive:
+
+*   Our company offers an excellent benefits package, including comprehensive health insurance, flexible work arrangements, and opportunities for professional growth.
+*   We're a rapidly growing organization with a strong focus on innovation and customer satisfaction. You'll have the chance to be part of shaping our vision and contributing to our success.
+*   Your skills and experience are highly valued by us, and we believe you'll make a significant impact in your role.
+
+We'd like to discuss possible adjustments to the salary offer based on your feedback. Could you please share more about what you had in mind? We're open to exploring options that meet both your expectations and our company's budget constraints.
+
+Let's schedule a follow-up call to discuss further. Would you be available to speak later this week?"
+
+This response aims to:
+
+*   Address the candidate's concerns about the salary offer
+*   Highlight the benefits of working with the company
+*   Show willingness to negotiate and find mutually beneficial solutions
+2025-05-13 13:48:12,801 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 13:48:22,474 - INFO - This is an info message
+2025-05-13 14:44:58,655 - INFO - C:\Users\athis\OneDrive\Documents\PSG\Project\Payroll System\app\blog\views.py changed, reloading.
+2025-05-13 14:45:05,358 - INFO - This is an info message
+2025-05-13 14:57:48,487 - INFO - This is an info message
+2025-05-13 15:29:15,195 - WARNING - Not Found: /favicon.ico

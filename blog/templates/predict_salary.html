@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Salary</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width:900px;
+            margin-left: 400px;
+            margin-top: 90px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            color: red;
+            margin-top: 10px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 400px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+            color: #28a745;
+        }
+
+        .modal-content p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="container">
+        <h2>Salary Prediction</h2>
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="{{ form.experience.id_for_label }}">Experience (Years):</label>
+            {{ form.experience }}
+
+            <label for="id_department">Department:</label>
+            <select name="department" id="id_department" required>
+                <option value="">Select Department</option>
+                {% for d in department %}
+                    <option value="{{ d.department_id }}">{{ d.department_name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="id_designation">Designation:</label>
+            <select name="designation" id="id_designation" required>
+                <option value="">Select Designation</option>
+            </select>
+
+            <label for="id_education">Education:</label>
+            <select name="education" id="id_education" required>
+                <option value="">Select Education</option>
+                {% for e in form.fields.education.choices %}
+                    <option value="{{ e.0 }}">{{ e.1 }}</option>
+                {% endfor %}
+            </select>
+
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+
+        <!-- Modal -->
+        <div id="salaryModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>💰 Predicted Salary</h3>
+                <p>₹<span id="modalSalary"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load designations dynamically
+        $('#id_department').on('change', function () {
+            var deptId = $(this).val();
+            var designationDropdown = $('#id_designation');
+
+            designationDropdown.html('<option value="">Loading...</option>');
+
+            if (deptId) {
+                $.ajax({
+                    url: "{% url 'get_designations' %}",
+                    data: {
+                        department_id: deptId
+                    },
+                    success: function (data) {
+                        designationDropdown.empty();
+                        designationDropdown.append('<option value="">Select Designation</option>');
+                        data.forEach(function (item) {
+                            designationDropdown.append(`<option value="${item.designation_title}">${item.designation_title}</option>`);
+                        });
+                    }
+                });
+            } else {
+                designationDropdown.html('<option value="">Select Designation</option>');
+            }
+        });
+
+        {% if salary %}
+            $(document).ready(function () {
+                $('#modalSalary').text('{{ salary|floatformat:2 }}');
+                $('#salaryModal').fadeIn();
+
+                $('form')[0].reset();
+                $('#id_designation').html('<option value="">Select Designation</option>');
+
+                $('.close').click(function () {
+                    $('#salaryModal').fadeOut();
+                });
+
+                $(window).click(function (event) {
+                    if ($(event.target).is('#salaryModal')) {
+                        $('#salaryModal').fadeOut();
+                    }
+                });
+            });
+        {% endif %}
+    </script>
+</body>
+</html>
